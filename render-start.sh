@@ -5,10 +5,11 @@ if [ -z "$GICC_EVENTS_EXTERNAL_URL" ]; then
     export APP_CND_URL="/storage"
 else
     export VITE_API_URL_CLIENT="${GICC_EVENTS_EXTERNAL_URL}/api"
-    export APP_CND_URL="${RENDER_EXTERNAL_URL}/storage"
+    export APP_CND_URL="${GICC_EVENTS_EXTERNAL_URL}/storage"
+    export VITE_API_URL_SERVER="${GICC_EVENTS_EXTERNAL_URL}/api"
 fi
 
-export VITE_API_URL_SERVER=http://localhost:80/api
+#export VITE_API_URL_SERVER=http://localhost:80/api
 export VITE_FRONTEND_URL=${GICC_EVENTS_EXTERNAL_URL:-"/"}
 export VITE_STRIPE_PUBLISHABLE_KEY=${VIRE_STRIPE_PUBLISHABLE_KEY:-"pk_test-change-me"}
 
